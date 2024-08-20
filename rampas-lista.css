@@ -1,0 +1,70 @@
+.rampas-lista {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.rampas-lista h2 {
+  margin-bottom: 40px;
+}
+
+.rampas-lista ul {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#rampa .rampa-lista ul {
+  padding: 0px 0px 20px 0px;
+}
+
+.rampas-lista li {
+  flex: 1;
+  min-width: 280px;
+}
+
+.rampas-lista a {
+  display: block;
+}
+
+.rampas-lista img {
+  margin-bottom: 16px;
+}
+
+.rampas-lista h3 {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.rampas-lista h3::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: var(--cor-v1);
+  transition: width 0.2s;
+}
+
+.rampas-lista a:hover h3::before {
+  width: 24px;
+}
+
+.rampas-lista li span {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .rampas-lista {
+    padding-bottom: 60px;
+  }
+}
+
+.rampas-lista ul {
+  gap: 20px;
+}
