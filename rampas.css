@@ -1,0 +1,103 @@
+.rampas-bg {
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-10) 0%);
+}
+
+.rampas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("../../img/top-right.svg") no-repeat top 40px right 20px;
+}
+
+.rampas-imagem {
+  display: grid;
+}
+
+.rampas-imagem img {
+  grid-area: 1/1;
+}
+
+.rampas-imagem span {
+  grid-area: 1/1;
+  place-self: start end;
+  margin-top: 20px;
+  background: var(--cor-111);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+  border-radius: 4px 0 0 4px;
+}
+
+.rampas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+
+.rampas h2,
+.rampas p {
+  grid-column: 1/-1;
+}
+
+.rampas h2 {
+  margin-bottom: 20px;
+}
+
+.rampas h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-v1);
+  margin-bottom: 8px;
+}
+
+.rampas p {
+  margin-bottom: 32px;
+}
+
+.rampas a {
+  place-self: end;
+}
+
+.rampas li {
+  display: flex;
+  align-items: center;
+}
+
+.rampas ul {
+  display: grid;
+  gap: 16px;
+}
+
+.rampas-conteudo img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 800px) {
+  .rampas-bg {
+    background: var(--cor-10);
+  }
+  .rampas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rampas-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .rampas ul {
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+  }
+  .rampas a {
+    place-self: start;
+  }
+}
